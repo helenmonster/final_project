@@ -1,4 +1,4 @@
-# Final_project on Squirrel tracker
+# Final Project on Squirrel tracker
 Group Name:  Project Group 50
 
 Section: 1
