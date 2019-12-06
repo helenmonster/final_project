@@ -1,0 +1,13 @@
+<!doctype>
+<html>
+  <h2>Add A New Squirrel Sighting</h2>
+    <body>
+      <form  method ='post'>
+	{%csrf_token%}
+	
+	{{ form.as_p }}
+	<br>
+	<input type="submit" name="Submit">
+      </form>
+    </body>
+</html>
