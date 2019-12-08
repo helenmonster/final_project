@@ -7,6 +7,7 @@ from django.db.models import Count,Sum
 from django.contrib import messages 
 from collections import Counter, OrderedDict
 from django.db.models import Avg
+
 def map(request):
     sightings = Sighting.objects.all()
     context = {
@@ -21,15 +22,15 @@ def sightings(request):
             }
     return render(request,'sightings/sightings.html',context)
 
-def add(request):
-    if request.method == 'POST':
-        form = SightingForm(request.POST)
-        if form.is_valid():
-            new_sighting = form.save()
-            return HttpResponseRedirect('/sightings/')
-    else:
-        form = SightingForm()
-    return render(request, 'sightings/add.html', {'form': form})
+#def add(request):
+    #if request.method == 'POST':
+        #form = SightingForm(request.POST)
+        #if form.is_valid():
+            #new_sighting = form.save()
+            #return HttpResponseRedirect('/sightings/')
+    #else:
+        #form = SightingForm()
+    #return render(request, 'sightings/add.html', {'form': form})
 
 def id(request,squirrel_id):
     try:
